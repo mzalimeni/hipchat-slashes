@@ -7,6 +7,9 @@ Bundler.require
 use ::Rack::PostBodyContentTypeParser
 
 require './misc'
-require './app'
-run Sinatra::Application
+require './main'
+require './creep'
+
+use Creep
+run Main
 
